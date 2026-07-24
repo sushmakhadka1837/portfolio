@@ -999,10 +999,37 @@ main {
   .profile-wrap {
     min-height: 250px;
     max-width: 320px;
+    margin: 0 auto;
   }
 
   .menu-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: white;
+    color: var(--ink);
+    padding: 8px 12px;
+    font-size: 0;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .menu-btn:hover {
+    background: rgba(15, 118, 110, 0.06);
+  }
+
+  .menu-btn::before {
+    content: "\2630";
+    font-size: 1.2rem;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .menu-btn.open::before {
+    content: "\2715";
   }
 
   .nav-menu {
@@ -1017,6 +1044,7 @@ main {
     padding: 8px;
     flex-direction: column;
     min-width: 190px;
+    z-index: 40;
   }
 
   .nav-menu.open {
@@ -1031,5 +1059,218 @@ main {
   .site-footer {
     margin: 0 auto 28px;
     width: min(1100px, 92%);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-media img {
+    min-height: 200px;
+    max-height: 280px;
+  }
+
+  .docs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  }
+
+  .hero h1 {
+    max-width: 100%;
+  }
+
+  .profile-photo.mini.top {
+    top: -10px;
+    right: 0;
+  }
+
+  .profile-photo.mini.bottom {
+    bottom: -14px;
+    right: 0;
+  }
+
+  .contact-intro h1 {
+    max-width: 100%;
+  }
+
+  .docs-intro h1 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    margin: 10px auto 0;
+    padding: 10px 12px;
+  }
+
+  .logo {
+    font-size: 0.95rem;
+  }
+
+  .menu-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    padding: 5px 9px;
+  }
+
+  main {
+    margin: 16px auto 48px;
+    gap: 14px;
+  }
+
+  .hero,
+  .panel {
+    padding: clamp(14px, 4vw, 24px);
+  }
+
+  .btn {
+    padding: 10px 14px;
+    font-size: 0.88rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero-actions .btn {
+    text-align: center;
+  }
+
+  .quick-links {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid,
+  .gallery-grid,
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo.main {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+  }
+
+  .profile-wrap {
+    min-height: auto;
+    max-width: 100%;
+  }
+
+  .profile-photo.mini {
+    width: 80px;
+    height: 80px;
+  }
+
+  .contact-card {
+    padding: 14px;
+  }
+
+  .contact-card h2 {
+    font-size: 1.05rem;
+  }
+
+  .contact-box-links a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .doc-certificate {
+    padding: 14px;
+  }
+
+  .doc-certificate h3 {
+    font-size: 1rem;
+  }
+
+  .cert-desc {
+    font-size: 0.88rem;
+  }
+
+  .service-card {
+    padding: 14px;
+  }
+
+  .service-card h3 {
+    font-size: 1rem;
+  }
+
+  .section-top h2,
+  .section-header h2 {
+    font-size: clamp(1.15rem, 5vw, 1.6rem);
+  }
+
+  .about-card {
+    padding: 14px;
+  }
+
+  .about-intro h2 {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    max-width: 100%;
+  }
+
+  .contact-intro h1,
+  .docs-intro h1 {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+
+  .contact-lead,
+  .docs-lead {
+    font-size: 0.95rem;
+  }
+
+  .timeline-item {
+    padding: 10px 12px 10px 36px;
+    font-size: 0.93rem;
+  }
+
+  .timeline-item h3 {
+    font-size: 0.95rem;
+  }
+
+  .project-detail-copy h1 {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+
+  .project-detail-block {
+    padding: 14px;
+  }
+
+  .gallery-item img {
+    height: 150px;
+  }
+
+  .training-thumb {
+    height: 140px;
+  }
+
+  .site-footer {
+    margin: 0 auto 16px;
+    font-size: 0.85rem;
   }
 }

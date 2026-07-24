@@ -259,8 +259,17 @@ const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 
 if (menuBtn && navMenu) {
-  menuBtn.addEventListener("click", () => {
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
     navMenu.classList.toggle("open");
+    menuBtn.classList.toggle("open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+      navMenu.classList.remove("open");
+      menuBtn.classList.remove("open");
+    }
   });
 }
 
@@ -268,6 +277,9 @@ document.querySelectorAll(".nav-menu a").forEach((item) => {
   item.addEventListener("click", () => {
     if (navMenu) {
       navMenu.classList.remove("open");
+    }
+    if (menuBtn) {
+      menuBtn.classList.remove("open");
     }
   });
 

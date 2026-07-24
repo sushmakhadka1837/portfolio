@@ -84,7 +84,7 @@ const educationGalleryData = [
 function renderGallery(data, container) {
   data.forEach((item) => {
     const card = document.createElement("article");
-    card.className = "gallery-item";
+    card.className = "gallery-item reveal";
     card.innerHTML = `
       <img src="${item.image}" alt="${item.title}" loading="lazy" />
       <div class="meta">
@@ -107,7 +107,7 @@ if (educationGallery) {
 if (projectGrid) {
   projectData.forEach((project) => {
     const card = document.createElement("article");
-    card.className = "project-card";
+    card.className = "project-card reveal";
     card.innerHTML = `
       <div class="project-media">
         <img src="${project.image}" alt="${project.title}" loading="lazy" />
@@ -124,7 +124,7 @@ if (projectGrid) {
 if (educationTimeline) {
   educationData.forEach((edu) => {
     const item = document.createElement("article");
-    item.className = "timeline-item";
+    item.className = "timeline-item reveal";
     item.innerHTML = `
       <h3>${edu.year} - ${edu.title}</h3>
       <p>${edu.detail}</p>
@@ -132,35 +132,6 @@ if (educationTimeline) {
     educationTimeline.appendChild(item);
   });
 }
-
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
-
-if (menuBtn && navMenu) {
-  menuBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    navMenu.classList.toggle("open");
-    menuBtn.classList.toggle("open");
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-      navMenu.classList.remove("open");
-      menuBtn.classList.remove("open");
-    }
-  });
-}
-
-document.querySelectorAll(".nav-menu a").forEach((item) => {
-  item.addEventListener("click", () => {
-    if (navMenu) {
-      navMenu.classList.remove("open");
-    }
-    if (menuBtn) {
-      menuBtn.classList.remove("open");
-    }
-  });
-});
 
 const revealItems = document.querySelectorAll(".reveal");
 const observer = new IntersectionObserver(
@@ -171,11 +142,11 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.2 }
+  { threshold: 0.15 }
 );
 
 revealItems.forEach((item, index) => {
-  item.style.transitionDelay = `${index * 0.08}s`;
+  item.style.transitionDelay = `${(index % 6) * 0.08}s`;
   observer.observe(item);
 });
 

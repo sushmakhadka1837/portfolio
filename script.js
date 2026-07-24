@@ -1,57 +1,3 @@
-const documentsData = [
-  {
-    title: "Resume / CV",
-    description: "Updated professional profile document.",
-    link: "#"
-  },
-  {
-    title: "Citizenship / ID Copy",
-    description: "Identity proof file for official verification.",
-    link: "#"
-  },
-  {
-    title: "Main Certificates",
-    description: "Core certificates related to skills and roles.",
-    link: "#"
-  }
-];
-
-const trainingsData = [
-  {
-    title: "Leadership Training",
-    description: "Teamwork and communication focused workshop.",
-    image:
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80"
-  },
-  {
-    title: "Technical Bootcamp",
-    description: "Hands-on practice and project-based learning.",
-    image:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80"
-  },
-  {
-    title: "Public Speaking Session",
-    description: "Presentation and confidence-building class.",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
-  }
-];
-
-const servicesData = [
-  {
-    title: "Documentation Support",
-    description: "Help in preparing clear and professional documents."
-  },
-  {
-    title: "Training Coordination",
-    description: "Planning and managing training events and workshops."
-  },
-  {
-    title: "Consultation Service",
-    description: "Guidance based on practical field experience."
-  }
-];
-
 const projectData = [
   {
     slug: "pet-adoption-system",
@@ -97,7 +43,7 @@ const projectData = [
       "AI features included marks prediction and daily MCQ solving support.",
       "Students could upload notes, view notices, and print documents while teachers handled approvals.",
       "Student can easily analyze their semesterwise perfomance and attendance days",
-     "Admin can easily manage the whole system and can view the overall performance of students and teachers."
+      "Admin can easily manage the whole system and can view the overall performance of students and teachers."
     ]
   }
 ];
@@ -135,27 +81,6 @@ const educationGalleryData = [
   }
 ];
 
-const documentGrid = document.getElementById("documentGrid");
-const trainingGrid = document.getElementById("trainingGrid");
-const serviceGrid = document.getElementById("serviceGrid");
-const educationTimeline = document.getElementById("educationTimeline");
-const educationGallery = document.getElementById("educationGallery");
-const projectGrid = document.getElementById("projectGrid");
-const projectDetail = document.getElementById("projectDetail");
-
-if (documentGrid) {
-  documentsData.forEach((doc) => {
-    const card = document.createElement("article");
-    card.className = "doc-card";
-    card.innerHTML = `
-      <h3>${doc.title}</h3>
-      <p>${doc.description}</p>
-      <a href="${doc.link}" target="_blank" rel="noreferrer">Open Document</a>
-    `;
-    documentGrid.appendChild(card);
-  });
-}
-
 function renderGallery(data, container) {
   data.forEach((item) => {
     const card = document.createElement("article");
@@ -171,31 +96,18 @@ function renderGallery(data, container) {
   });
 }
 
-if (trainingGrid) {
-  renderGallery(trainingsData, trainingGrid);
-}
+const educationTimeline = document.getElementById("educationTimeline");
+const educationGallery = document.getElementById("educationGallery");
+const projectGrid = document.getElementById("projectGrid");
 
 if (educationGallery) {
   renderGallery(educationGalleryData, educationGallery);
 }
 
-if (serviceGrid) {
-  servicesData.forEach((service) => {
-    const card = document.createElement("article");
-    card.className = "service-card";
-    card.innerHTML = `
-      <h3>${service.title}</h3>
-      <p>${service.description}</p>
-    `;
-    serviceGrid.appendChild(card);
-  });
-}
-
 if (projectGrid) {
   projectData.forEach((project) => {
-    const card = document.createElement("a");
-    card.className = "project-card project-link";
-    card.href = `project.html?project=${encodeURIComponent(project.slug)}`;
+    const card = document.createElement("article");
+    card.className = "project-card";
     card.innerHTML = `
       <div class="project-media">
         <img src="${project.image}" alt="${project.title}" loading="lazy" />
@@ -204,43 +116,9 @@ if (projectGrid) {
       <h3>${project.title}</h3>
       <p>${project.description}</p>
       <div class="project-tech">${project.tech}</div>
-      <span class="project-open">Open Project</span>
     `;
-
     projectGrid.appendChild(card);
   });
-}
-
-if (projectDetail) {
-  const params = new URLSearchParams(window.location.search);
-  const projectSlug = params.get("project") || projectData[0].slug;
-  const project = projectData.find((item) => item.slug === projectSlug) || projectData[0];
-
-  const featureItems = project.details.map((item) => `<li>${item}</li>`).join("");
-
-  projectDetail.innerHTML = `
-    <section class="project-detail-card reveal visible">
-      <div class="project-detail-media">
-        <img src="${project.image}" alt="${project.title}" />
-      </div>
-      <div class="project-detail-copy">
-        <span class="project-type">${project.type}</span>
-        <h1>${project.title}</h1>
-        <p class="project-detail-summary">${project.description}</p>
-        <div class="project-tech">${project.tech}</div>
-        <div class="project-detail-block">
-          <h2>Key Highlights</h2>
-          <ul>
-            ${featureItems}
-          </ul>
-        </div>
-        <div class="project-detail-actions">
-          <a class="btn btn-primary" href="index.html#projects">Back to Projects</a>
-          <a class="btn btn-secondary" href="contact.html">Contact Me</a>
-        </div>
-      </div>
-    </section>
-  `;
 }
 
 if (educationTimeline) {
@@ -282,12 +160,6 @@ document.querySelectorAll(".nav-menu a").forEach((item) => {
       menuBtn.classList.remove("open");
     }
   });
-
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
-  const linkPage = item.getAttribute("href");
-  if (linkPage === currentPage) {
-    item.classList.add("current");
-  }
 });
 
 const revealItems = document.querySelectorAll(".reveal");

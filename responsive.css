@@ -1,0 +1,172 @@
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  padding: 8px 11px;
+  font: 0.65rem var(--mono);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .site-header {
+    position: relative;
+    gap: 12px;
+  }
+
+  .brand {
+    flex: 1;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-header nav {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    box-shadow: 6px 6px 0 var(--coral);
+  }
+
+  .site-header nav.is-open {
+    display: grid;
+    gap: 0;
+  }
+
+  .site-header nav a {
+    padding: 11px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .site-header nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .header-cta {
+    white-space: nowrap;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .hero-proof {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 52px;
+  }
+
+  .hero-proof p {
+    flex: 1;
+    min-width: 120px;
+    padding-right: 12px;
+  }
+
+  .hero-visual img {
+    width: 90%;
+  }
+
+  .hero-note {
+    right: 2%;
+  }
+
+  .project-meta h3 {
+    font-size: 1.65rem;
+  }
+
+  .contact-email {
+    gap: 12px;
+    overflow-wrap: anywhere;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-wrap,
+  .site-header {
+    width: min(100% - 28px, 600px);
+  }
+
+  .site-header {
+    height: 70px;
+  }
+
+  .brand span {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand {
+    font-size: 0.7rem;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 50px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 15vw, 4.2rem);
+  }
+
+  .hero-summary {
+    font-size: 0.95rem;
+  }
+
+  .section-heading h2,
+  .education-copy h2,
+  .contact-copy h2 {
+    font-size: clamp(2.2rem, 12vw, 3.5rem);
+  }
+
+  .hero-visual {
+    min-height: 360px;
+  }
+
+  .hero-stamp {
+    width: 72px;
+    height: 72px;
+    font-size: 0.52rem;
+  }
+
+  .hero-note {
+    padding: 10px 12px;
+    font-size: 0.68rem;
+  }
+
+  .project-card {
+    flex-basis: calc(100vw - 28px);
+  }
+
+  .project-image {
+    height: 210px;
+  }
+
+  .project-meta {
+    padding: 20px;
+  }
+
+  .education-item {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .training-strip {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

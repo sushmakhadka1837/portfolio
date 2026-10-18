@@ -18,6 +18,7 @@ const previousButton = document.querySelector('.slider-prev');
 const nextButton = document.querySelector('.slider-next');
 const menuToggle = document.querySelector('.menu-toggle');
 const primaryNavigation = document.querySelector('#primary-navigation');
+const themeToggle = document.querySelector('.theme-toggle');
 
 function moveProjects(direction) {
   if (!slider) return;
@@ -37,6 +38,19 @@ primaryNavigation?.querySelectorAll('a').forEach((link) => {
     primaryNavigation.classList.remove('is-open');
     menuToggle?.setAttribute('aria-expanded', 'false');
   });
+});
+
+const root = document.body;
+const savedTheme = localStorage.getItem('portfolio-theme');
+if (savedTheme === 'dark') {
+  root.classList.add('dark-mode');
+  themeToggle && (themeToggle.textContent = '☀️');
+}
+
+themeToggle?.addEventListener('click', () => {
+  const isDark = root.classList.toggle('dark-mode');
+  localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
+  themeToggle.textContent = isDark ? '☀️' : '🌙';
 });
 
 document.querySelector('#year').textContent = String(new Date().getFullYear());

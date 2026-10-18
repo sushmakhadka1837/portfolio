@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Pet adoption illustration</title>
+  <desc id="desc">A friendly illustrated pet adoption scene with a digital heart.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#183d61"/>
+      <stop offset="1" stop-color="#4a9fc2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <circle cx="210" cy="150" r="100" fill="#b5eff0" opacity=".24"/>
+  <path d="M0 565 Q260 470 480 570 T950 545 T1200 570 V700 H0Z" fill="#17476a"/>
+  <path d="M500 350 C400 250 270 330 300 460 C325 560 500 620 500 620 S675 560 700 460 C730 330 600 250 500 350Z" fill="#ffb6c7" opacity=".95"/>
+  <path d="M500 395 C450 325 365 370 380 440 C395 505 500 555 500 555 S605 505 620 440 C635 370 550 325 500 395Z" fill="#e75e89"/>
+  <circle cx="405" cy="320" r="100" fill="#e9b37a"/>
+  <path d="M340 275 L290 200 380 245 M470 275 L520 200 430 245" fill="#d9935f"/>
+  <circle cx="375" cy="325" r="13" fill="#17304d"/>
+  <circle cx="435" cy="325" r="13" fill="#17304d"/>
+  <path d="M395 355 Q405 370 420 355" fill="none" stroke="#17304d" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="790" cy="180" r="90" fill="#e4fbff" opacity=".92"/>
+  <path d="M790 220 V140 M750 180 H830" stroke="#4a9fc2" stroke-width="18" stroke-linecap="round"/>
+  <text x="705" y="325" font-family="Arial" font-size="24" font-weight="700" fill="#e4fbff">ADOPT WITH LOVE</text>
+</svg>

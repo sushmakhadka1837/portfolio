@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">AI powered result dashboard</title>
+  <desc id="desc">An abstract blue artificial intelligence result dashboard illustration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#123d68"/>
+      <stop offset="1" stop-color="#1f8ab0"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e5fbff"/>
+      <stop offset="1" stop-color="#9ad9e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <circle cx="1010" cy="80" r="220" fill="#64d8e3" opacity=".16"/>
+  <circle cx="140" cy="630" r="260" fill="#0b2c57" opacity=".4"/>
+  <path d="M0 570 C180 470 250 640 420 540 S700 470 860 560 S1060 640 1200 510 V700 H0Z" fill="#0b315c" opacity=".45"/>
+  <rect x="180" y="115" width="840" height="450" rx="28" fill="#092747" opacity=".78" stroke="#9cebf1" stroke-width="3"/>
+  <rect x="225" y="165" width="310" height="325" rx="18" fill="url(#panel)" opacity=".96"/>
+  <circle cx="380" cy="290" r="82" fill="none" stroke="#236b95" stroke-width="22" stroke-dasharray="390 130"/>
+  <text x="380" y="305" text-anchor="middle" font-family="Arial" font-size="48" font-weight="700" fill="#123d68">92%</text>
+  <text x="380" y="350" text-anchor="middle" font-family="Arial" font-size="22" fill="#236b95">AI SCORE</text>
+  <rect x="590" y="180" width="350" height="26" rx="13" fill="#9cebf1" opacity=".8"/>
+  <rect x="590" y="240" width="260" height="18" rx="9" fill="#6dc9d8" opacity=".7"/>
+  <rect x="590" y="285" width="300" height="18" rx="9" fill="#6dc9d8" opacity=".7"/>
+  <path d="M600 445 L660 390 720 420 790 325 855 370 930 270" fill="none" stroke="#8af3d5" stroke-width="9"/>
+  <circle cx="930" cy="270" r="12" fill="#8af3d5"/>
+  <text x="590" y="370" font-family="Arial" font-size="22" fill="#d7fbff">RESULT HUB / INSIGHTS</text>
+  <text x="600" y="520" font-family="Arial" font-size="18" fill="#9cebf1">attendance · results · MCQ practice</text>
+</svg>

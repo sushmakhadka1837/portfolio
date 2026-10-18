@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">AI shopping assistant illustration</title>
+  <desc id="desc">An abstract AI assisted e-commerce shopping illustration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#183b5a"/>
+      <stop offset="1" stop-color="#3e8a9d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <circle cx="980" cy="120" r="250" fill="#b9f2d3" opacity=".14"/>
+  <path d="M0 610 C210 500 330 660 520 560 S850 500 1200 590 V700 H0Z" fill="#102f4b" opacity=".5"/>
+  <path d="M250 200 H835 L760 515 H320 Z" fill="#e7fbf6" opacity=".94"/>
+  <path d="M250 200 H835 L760 515 H320 Z" fill="none" stroke="#c2f4df" stroke-width="8"/>
+  <path d="M250 200 L220 135 H120" fill="none" stroke="#c2f4df" stroke-width="15" stroke-linecap="round"/>
+  <circle cx="420" cy="565" r="30" fill="#c2f4df"/>
+  <circle cx="690" cy="565" r="30" fill="#c2f4df"/>
+  <rect x="370" y="270" width="120" height="130" rx="18" fill="#80c8d2"/>
+  <path d="M395 350 L430 315 462 345" fill="none" stroke="#183b5a" stroke-width="14"/>
+  <circle cx="430" cy="305" r="12" fill="#183b5a"/>
+  <rect x="555" y="270" width="150" height="130" rx="18" fill="#f3c885"/>
+  <path d="M575 370 Q630 245 685 370" fill="#e78356"/>
+  <circle cx="630" cy="315" r="22" fill="#f7e6bd"/>
+  <rect x="785" y="155" width="260" height="190" rx="26" fill="#11314c" stroke="#b9f2d3" stroke-width="4"/>
+  <circle cx="915" cy="235" r="45" fill="#b9f2d3"/>
+  <path d="M895 240 Q915 260 935 240 M900 220 H901 M930 220 H931" fill="none" stroke="#183b5a" stroke-width="7" stroke-linecap="round"/>
+  <text x="815" y="305" font-family="Arial" font-size="22" fill="#e7fbf6">AI SHOPPING ASSISTANT</text>
+</svg>

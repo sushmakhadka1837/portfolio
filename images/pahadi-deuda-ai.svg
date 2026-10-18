@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Pahadi Deuda song illustration</title>
+  <desc id="desc">A warm illustrated Himalayan landscape with traditional Deuda music motifs.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#402c5d"/>
+      <stop offset="1" stop-color="#dd815b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#sky)"/>
+  <circle cx="950" cy="145" r="80" fill="#ffe5a5"/>
+  <path d="M0 520 L210 270 385 500 575 215 810 520 1000 300 1200 530 V700 H0Z" fill="#273653"/>
+  <path d="M0 570 L210 390 390 575 585 345 800 580 1000 390 1200 570 V700 H0Z" fill="#172b43"/>
+  <path d="M465 700 Q470 520 600 470 Q730 520 735 700Z" fill="#b84d5b"/>
+  <path d="M500 540 Q600 455 700 540" fill="none" stroke="#ffd37f" stroke-width="14"/>
+  <circle cx="600" cy="425" r="45" fill="#f1b07a"/>
+  <path d="M555 410 Q600 355 645 410" fill="#261d38"/>
+  <path d="M520 605 Q600 540 680 605 M500 650 Q600 575 700 650" fill="none" stroke="#ffd37f" stroke-width="10"/>
+  <path d="M235 590 Q310 520 385 590 M200 635 Q310 535 420 635" fill="none" stroke="#e6816e" stroke-width="12"/>
+  <text x="70" y="125" font-family="Georgia,serif" font-size="52" font-style="italic" fill="#fff0c2">Pahadi Deuda</text>
+  <text x="75" y="170" font-family="Arial" font-size="22" letter-spacing="4" fill="#ffd37f">SONG · CULTURE · HERITAGE</text>
+</svg>

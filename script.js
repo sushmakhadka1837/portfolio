@@ -54,3 +54,66 @@ themeToggle?.addEventListener('click', () => {
 });
 
 document.querySelector('#year').textContent = String(new Date().getFullYear());
+
+const bookContent = {
+  song: {
+    label: 'Favourite song',
+    title: 'Agar Tum Saath Ho',
+    text: 'The feeling I return to.',
+    number: '01 / 05',
+    art: 'song-art'
+  },
+  quote: {
+    label: 'Favourite line',
+    title: '1% chance is enough to make it 100%.',
+    text: 'A reminder to believe, begin, and keep going.',
+    number: '02 / 05',
+    art: 'quote-art'
+  },
+  book: {
+    label: 'Favourite book',
+    title: 'Ijoriya',
+    text: 'By Subin Bhattarai — a story that stays with me.',
+    number: '03 / 05',
+    art: 'book-art'
+  },
+  belief: {
+    label: 'A line I believe in',
+    title: "God's plan over mine.",
+    text: 'Trusting the journey, even when I cannot see the whole path.',
+    number: '04 / 05',
+    art: 'belief-art'
+  },
+  series: {
+    label: 'On repeat',
+    title: 'Marvel web series',
+    text: 'Stories with a little wonder, courage, and imagination.',
+    number: '05 / 05',
+    art: 'series-art'
+  }
+};
+
+const bookButtons = document.querySelectorAll('.shelf-book');
+const panel = document.querySelector('.open-book');
+const panelLabel = document.querySelector('[data-panel-label]');
+const panelTitle = document.querySelector('[data-panel-title]');
+const panelText = document.querySelector('[data-panel-text]');
+const panelNumber = document.querySelector('[data-panel-number]');
+const panelArt = document.querySelector('[data-panel-art]');
+
+bookButtons.forEach((book) => {
+  book.addEventListener('click', () => {
+    const content = bookContent[book.dataset.book];
+    if (!content || !panel) return;
+    bookButtons.forEach((item) => item.classList.toggle('is-active', item === book));
+    panel.classList.remove('is-open');
+    window.setTimeout(() => {
+      panelLabel.textContent = content.label;
+      panelTitle.textContent = content.title;
+      panelText.textContent = content.text;
+      panelNumber.textContent = content.number;
+      panelArt.className = `book-page book-page-art ${content.art}`;
+      panel.classList.add('is-open');
+    }, 120);
+  });
+});

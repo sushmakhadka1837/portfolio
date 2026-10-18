@@ -29,6 +29,10 @@
     grid-template-columns: 1fr;
   }
 
+  .education-copy {
+    order: -1;
+  }
+
   .project-detail-hero,
   .detail-content,
   .project-stack {

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img">
+  <defs>
+    <linearGradient id="quote-bg" x1="0" y1="1" x2="1" y2="0">
+      <stop stop-color="#7c332c"/>
+      <stop offset="1" stop-color="#d9624f"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#quote-bg)"/>
+  <path d="M440 350 590 0h50v350z" fill="#f7f9fc" opacity=".1"/>
+  <circle cx="530" cy="90" r="58" fill="none" stroke="#fff" stroke-width="2" opacity=".7"/>
+  <circle cx="530" cy="90" r="88" fill="none" stroke="#fff" stroke-width="1" opacity=".3"/>
+  <text x="42" y="72" fill="#ffe1db" font-family="monospace" font-size="17" letter-spacing="4">A LINE I BELIEVE IN</text>
+  <text x="42" y="132" fill="#fff" font-family="Georgia,serif" font-size="31" font-style="italic">1% chance</text>
+  <text x="42" y="172" fill="#fff" font-family="Georgia,serif" font-size="31" font-style="italic">is enough to</text>
+  <text x="42" y="212" fill="#fff" font-family="Georgia,serif" font-size="31" font-style="italic">make it 100%.</text>
+  <text x="44" y="264" fill="#ffe1db" font-family="monospace" font-size="13" letter-spacing="2">BELIEVE • BEGIN • BECOME</text>
+</svg>

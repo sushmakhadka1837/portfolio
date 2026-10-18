@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img">
+  <defs>
+    <linearGradient id="song-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#102a43"/>
+      <stop offset="1" stop-color="#1f5f91"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#song-bg)"/>
+  <circle cx="505" cy="84" r="108" fill="#7ec6ff" opacity=".18"/>
+  <circle cx="505" cy="84" r="62" fill="none" stroke="#d8edff" stroke-width="2" opacity=".7"/>
+  <path d="M0 276c108-71 189 56 292-16 112-78 189 32 348-45v145H0z" fill="#0b1b2c" opacity=".55"/>
+  <path d="M0 304c110-67 193 29 285-19 115-60 215 40 355-31" fill="none" stroke="#9bd4ff" stroke-width="3" opacity=".5"/>
+  <text x="42" y="72" fill="#9bd4ff" font-family="monospace" font-size="17" letter-spacing="4">FAVOURITE SONG</text>
+  <text x="42" y="124" fill="#fff" font-family="Georgia,serif" font-size="37" font-style="italic">Agar Tum</text>
+  <text x="42" y="166" fill="#fff" font-family="Georgia,serif" font-size="37" font-style="italic">Saath Ho</text>
+  <text x="44" y="220" fill="#d8edff" font-family="monospace" font-size="13" letter-spacing="2">MUSIC • MEMORY • FEELING</text>
+</svg>
